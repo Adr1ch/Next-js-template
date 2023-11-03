@@ -18,6 +18,11 @@ export default function Buttons() {
       <Button theme="purple">Lorem ipsum dolor</Button>
       <br />
       <br />
+      <Button size="lg" theme="deep">
+        Lorem ipsum dolor
+      </Button>
+      <br />
+      <br />
       <Checkbox />
     </div>
   );

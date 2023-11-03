@@ -25,6 +25,14 @@ export default function MainLayout({
               Buttons
             </Link>
           </li>
+          <li>
+            <Link
+              className="inline-flex px-[15px] py-[5px] rounded-md bg-slate-200"
+              href="/showcases/modals"
+            >
+              Modals
+            </Link>
+          </li>
         </ul>
       </nav>
       <div>{children}</div>

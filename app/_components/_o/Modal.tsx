@@ -4,7 +4,7 @@ import Button from "@/app/_components/_a/Button";
 import "./Modal.css";
 
 import { createPortal } from "react-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Modal({
   isOpen = false,
@@ -15,15 +15,23 @@ export default function Modal({
   children: React.ReactNode;
   onClose?: () => void;
 }) {
+  const [animationOpen, setAnimationOpen] = useState(isOpen);
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
+      setAnimationOpen(isOpen);
       return;
     }
-    document.body.classList.remove("overflow-hidden");
+
+    setTimeout(() => {
+      document.body.classList.remove("overflow-hidden");
+      setAnimationOpen(isOpen);
+    }, 400);
   }, [isOpen]);
+
   return (
-    isOpen &&
+    animationOpen &&
     createPortal(
       <div
         className={`fixed top-0 left-0 bg-slate-700/70 h-screen w-full flex p-[15px] overflow-y-auto overlay ${

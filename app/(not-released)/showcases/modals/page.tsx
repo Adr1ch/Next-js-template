@@ -14,7 +14,7 @@ export default function Modals() {
       <br />
       <br />
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <div className="p-35px">
+        <div className="p-[35px]">
           <p className="mb-[35px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
             sequi ut? Explicabo tempora et, a velit similique quisquam

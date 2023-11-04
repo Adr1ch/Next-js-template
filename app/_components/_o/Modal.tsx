@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/app/_components/_a/Button";
+import CloseIcon from "@/app/_components/_a/CloseIcon";
 import "./Modal.css";
 
 import { createPortal } from "react-dom";
@@ -39,13 +40,13 @@ export default function Modal({
         }`}
       >
         <div
-          className={`w-full max-w-[750px] bg-white m-auto rounded-lg modal ${
+          className={`w-full max-w-[750px] bg-white m-auto rounded-lg relative modal ${
             isOpen ? "open" : ""
           }`}
         >
-          <Button theme="deep" onClick={onClose}>
-            Close
-          </Button>
+          <span className="absolute	top-[5px] right-[5px]" onClick={onClose}>
+            <CloseIcon />
+          </span>
           <div>{children}</div>
         </div>
       </div>,

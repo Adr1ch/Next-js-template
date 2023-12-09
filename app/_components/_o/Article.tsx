@@ -19,8 +19,8 @@ export default function Article({
   date: string;
   articleImage: string;
   authorName: string;
-  categories: unknown[];
-  onClick: () => void;
+  categories?: unknown[];
+  onClick?: () => void;
   authorImage: string;
 }) {
   return (

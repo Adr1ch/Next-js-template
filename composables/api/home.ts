@@ -1,8 +1,8 @@
 import getBaseUrl from "@/lib/get-base-url/getBaseUrl";
-
+import { pagesPath, filterBySlug } from "@/utils/const";
 const getHomePageData = async () => {
   const res = await fetch(
-    `${getBaseUrl()}/api/pages?populate=deep,10&?filters[slug][$eq]=home-page`,
+    `${getBaseUrl()}${pagesPath}&${filterBySlug("home-page")}`,
     {
       cache: "no-store",
     }

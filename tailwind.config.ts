@@ -23,6 +23,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-oceano": "linear-gradient(152deg, #17cb8a -2%, #01b0fb 69%)",
+        "gradient-pearino":
+          "linear-gradient(112deg, #ff9d67 -2%, #ff5f89 102%)",
       },
     },
   },
